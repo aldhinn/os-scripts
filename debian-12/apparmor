@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Script for setting up app armor.
+sudo apt install -y apparmor-notify apparmor-utils \
+apparmor-profiles apparmor-profiles-extra
+
+sudo cp -r /usr/share/apparmor/extra-profiles/* /etc/apparmor.d/
+sudo aa-enforce /etc/apparmor.d/*
