@@ -19,4 +19,4 @@ sudo rm -r /etc/libreoffice/registry
 sudo apt install -y network-manager
 
 # Delete unnecessary dependencies
-sudo apt autoremove -y
+sudo apt autoremove -y --purge
