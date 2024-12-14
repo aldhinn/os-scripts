@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Strip down the packages the I don't need on a kde debian 12 setup.
+
+sudo apt purge -y libreoffice-common kate gimp konqueror kmail zutty akregator \
+dragonplayer juk kaddressbook korganizer firefox-esr kwalletmanager kontrast \
+imagemagick
+
+sudo rm -r /etc/libreoffice/registry
+
+# Delete unnecessary dependencies
+sudo apt autoremove -y --purge
