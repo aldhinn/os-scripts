@@ -4,7 +4,7 @@
 
 sudo apt purge -y libreoffice-common kate gimp konqueror kmail zutty akregator \
 dragonplayer juk kaddressbook korganizer firefox-esr kwalletmanager kontrast \
-imagemagick
+imagemagick-6-common kmouth xpdf knotes
 
 sudo rm -r /etc/libreoffice/registry
 
