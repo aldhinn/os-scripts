@@ -11,7 +11,7 @@ rhythmbox gnome-music lightsoff network-manager-gnome \
 gnome-robots gnome-tetravex gnome-taquin tali gnome-sudoku \
 swell-foop quadrapassel gnome-nibbles gnome-mines gnome-mahjongg \
 gnome-klotski hitori five-or-more four-in-a-row aisleriot gnome-2048 \
-seahorse im-config iagno malcontent gnome-color-manager
+seahorse im-config iagno malcontent gnome-color-manager gnome-calculator
 
 sudo rm -r /etc/libreoffice/registry
 
