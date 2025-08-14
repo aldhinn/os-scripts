@@ -2,16 +2,12 @@
 
 # Strip down the packages the I don't need on a gnome debian 12 setup.
 
-sudo apt purge -y libreoffice-common transmission-gtk \
+sudo apt purge -y libreoffice-common \
 gnome-contacts gnome-weather gnome-clocks gnome-maps totem \
-gnome-calendar simple-scan gnome-chess gnome-snapshot gnome-logs synaptic \
+gnome-calendar simple-scan gnome-snapshot gnome-logs \
 firefox-esr evolution yelp gnome-font-viewer gnome-characters \
 shotwell evince loupe gnome-sound-recorder gnome-disk-utility \
-rhythmbox gnome-music lightsoff network-manager-gnome \
-gnome-robots gnome-tetravex gnome-taquin tali gnome-sudoku \
-swell-foop quadrapassel gnome-nibbles gnome-mines gnome-mahjongg \
-gnome-klotski hitori five-or-more four-in-a-row aisleriot gnome-2048 \
-seahorse im-config iagno malcontent gnome-color-manager gnome-calculator \
+gnome-music seahorse im-config malcontent gnome-calculator \
 gnome-tour gnome-connections nm-connection-editor
 
 sudo rm -r /etc/libreoffice/registry
