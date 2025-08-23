@@ -1,0 +1,25 @@
+#!/bin/sh
+
+for file in /var/lib/libvirt/images/*.qcow2; do
+    if [ -f "$file" ]; then
+        backup="$file.backup"
+
+        echo "Backing up $file to $backup..."
+        cp -- "$file" "$backup"
+        if [ $? -ne 0 ]; then
+            echo "Failed to create backup for $file, skipping..."
+            continue
+        fi
+
+        echo "Running virt-sparsify on $file..."
+        virt-sparsify --in-place "$file"
+        if [ $? -eq 0 ]; then
+            echo "virt-sparsify succeeded on $file, removing backup..."
+            rm -- "$backup"
+        else
+            echo "virt-sparsify failed on $file, restoring backup..."
+            rm -- "$file"
+            mv -- "$backup" "$file"
+        fi
+    fi
+done
